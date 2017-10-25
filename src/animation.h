@@ -36,7 +36,6 @@ class Transform
 public:
 	Transform();
 	Transform(mat3 rotation, vec3 origin);
-	Transform(Transform& transform);
 	~Transform();
 
 	void SetOrigin(vec3 origin);

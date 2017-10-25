@@ -43,11 +43,6 @@ Transform::Transform()
 	m_transformMatrix = mat4(1);
 }
 
-Transform::Transform(Transform &transform)
-{
-	*this = transform;
-}
-
 Transform::Transform(mat3 rotation, vec3 origin)
 {
 	m_transformMatrix = mat4
@@ -60,12 +55,6 @@ Transform::Transform(mat3 rotation, vec3 origin)
 }
 
 Transform::~Transform() {}
-
-Transform Transform::GetInverse()
-{
-	Transform t;
-	
-}
 
 vec3 Transform::GetOrigin()
 {

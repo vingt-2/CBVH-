@@ -106,7 +106,7 @@ Transform Transform::GetInverse()
 
 	vec3 origin(m_transformMatrix[3][0], m_transformMatrix[3][1], m_transformMatrix[3][2]);
 
-	return Transform(inverseRotation, -origin);
+	return Transform(inverseRotation, -(inverseRotation*origin));
 }
 
 void QuerySkeletalAnimationRecursive
